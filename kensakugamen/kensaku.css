@@ -1,0 +1,21 @@
+/*----------メイン画面背景設定----------*/
+body {background-image: url("./back.jpg");}
+
+/* @media screen and (min-width:0px){
+  body{
+    color: #5bc0de;
+      
+  }
+}
+
+@media screen and (min-width:300px){
+  body{
+    color: #d9534f;
+  }
+}
+
+@media screen and (min-width:600px){
+  body{
+    color: #115a71;
+  }
+} */

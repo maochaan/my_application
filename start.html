@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>てんこーで スタート画面</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="./start.js"></script>
+    <script src="./jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" href="start.css">
+    <link rel='stylesheet' type='text/css'  href='swiper.css'>
+　  <script src='swiper.js'></script>
+</head>
+<body>
+    <h1 align='center'>てんこーで 〜天気予報&服装提案アプリ〜</h1>
+    <div style="display:grid;grid-template-columns:calc(50% - 100px) 50%;"></div>
+        <div class="swiper-container">
+            <!-- メイン表示部分 -->
+            <div class="swiper-wrapper">
+                <!-- 各スライド -->
+                <div class="swiper-slide">step1 性別や年齢などのアンケートに回答してもらいます</div>
+                <div class="swiper-slide">あなたが持っている服の種類を回答してもらいます</div>
+                <div class="swiper-slide">天気予報を知りたい地点とその日にちを回答してもらいます</div>
+                <div class="swiper-slide">天気予報とあなたに最適な服装が表示されます</div>
+                <div class="swiper-slide">アンケート回答済の人は地点入力へをクリックしてください</div>
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+    <script>
+        var mySwiper = new Swiper('.swiper-container', {
+            // slidesPerView: 3,
+            centeredSlides: true,
+            speed: 900,
+            loop: true,
+            // effect: 'coverflow',
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev'
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'bullets',
+                clickable: true
+            },
+            breakpoints: {
+                // 768px以上の場合
+                768: {
+                slidesPerView: 1,
+                },
+                // 980px以上の場合
+                980: {
+                slidesPerView: 2,
+                },
+                // 1200px以上の場合
+                1200: {
+                slidesPerView: 3,
+                }
+            }
+        });
+    </script>
+
+    <button onclick="next_page()" class="start_button" type="submit">アンケートへ</button>
+    <button onclick="next_point()" class="point_button" type="submit">地点入力へ</button>
+    
+</body>
+</html>

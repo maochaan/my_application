@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="ja">
+    
+<head>
+    <meta charset="UTF-8">
+    <title>検索画面</title>
+    <link rel="stylesheet" type="text/css"href="kensaku.css">
+    <script src="//code.jquery.com/jquery-1.12.1.min.js"></script>
+</head>
+<script type="text/javascript">
+$(document).ready(function(){
+ 
+    // プルダウンのoption内容をコピー
+    var pd2 = $("#lv2Pulldown option").clone();
+    var pd3 = $("#lv3Pulldown option").clone();
+ 
+    // 1→2連動
+    $("#lv1Pulldown").change(function () {
+        // lv1のvalue取得
+        var lv1Val = $("#lv1Pulldown").val();
+ 
+        // lv2Pulldownのdisabled解除
+        $("#lv2Pulldown").removeAttr("disabled");
+ 
+        // 一旦、lv2Pulldownのoptionを削除
+        $("#lv2Pulldown option").remove();
+ 
+        // (コピーしていた)元のlv2Pulldownを表示
+        $(pd2).appendTo("#lv2Pulldown");
+ 
+        // 選択値以外のクラスのoptionを削除
+        $("#lv2Pulldown option[class != p"+lv1Val+"]").remove();
+ 
+        // 「▼選択」optionを先頭に表示
+        $("#lv2Pulldown").prepend('<option value="0" selected="selected">▼選択</option>');
+ 
+        // lv3Pulldown disabled処理
+        $("#lv3Pulldown").attr("disabled", "disabled");
+        $("#lv3Pulldown option").remove();
+        $("#lv3Pulldown").prepend('<option value="0" selected="selected">▼選択</option>');
+    });
+ 
+    // 2→3連動
+    $("#lv2Pulldown").change(function () {
+        // lv2のvalue取得
+        var lv2Val = $("#lv2Pulldown").val();
+ 
+        // lv3Pulldownのdisabled解除
+        $("#lv3Pulldown").removeAttr("disabled");
+ 
+        // 一旦、lv3Pulldownのoptionを削除
+        $("#lv3Pulldown option").remove();
+ 
+        // (コピーしていた)元のlv3Pulldownを表示
+        $(pd3).appendTo("#lv3Pulldown");
+ 
+        // 選択値以外のクラスのoptionを削除
+        $("#lv3Pulldown option[class != p"+lv2Val+"]").remove();
+ 
+        // 「▼選択」optionを先頭に表示
+        $("#lv3Pulldown").prepend('<option value="0" selected="selected">▼選択</option>');
+    });
+});
+</script>
+<body>
+    <h1 class="plan" align='center'>てんこーで 〜天気予報&服装提案アプリ〜</h1>
+<select name="lv1" id="lv1Pulldown">
+<option value="0" selected="selected">▼選択</option>
+<option value="1">北海道地方</option>
+<option value="2">東北地方</option>
+<option value="3">関東甲信地方</option>
+<option value="4">東海地方</option>
+<option value="5">北陸地方</option>
+<option value="6">近畿地方</option>
+<option value="7">中国地方（山口を除く）</option>
+<option value="8">四国地方</option>
+<option value="9">九州北部地方（山口を含む）</option>
+<option value="10">九州南部地方</option>
+<option value="11">沖縄地方</option>
+</select>
+        
+<select name="lv2" id="lv2Pulldown" disabled="disabled">
+<option value="0">▼選択</option>
+    
+<option value="12" class="p1">宗谷地方</option>
+<option value="13" class="p1"> 上川・留萌地方</option>
+<option value="14" class="p1"> 石狩・空知・後志地方</option>
+<option value="15" class="p1"> 網走・北見・紋別地方</option>
+<option value="16" class="p1">釧路・根室・十勝地方</option>
+<option value="17" class="p1"> 胆振・日高地方</option>
+<option value="18" class="p1">渡島・檜山地方</option>
+    
+<option value="19" class="p2">青森県</option>
+<option value="20" class="p2">秋田県</option>
+<option value="21" class="p2">岩手県</option>
+<option value="22" class="p2">宮城県</option>
+<option value="23" class="p2">山形県</option>
+<option value="24" class="p2">福島県</option>
+    
+<option value="25" class="p3">茨城県</option>
+<option value="26" class="p3">栃木県</option>
+<option value="27" class="p3">群馬県</option>
+<option value="28" class="p3">埼玉県</option>
+<option value="29" class="p3">東京都</option>
+<option value="30" class="p3">千葉県</option>
+<option value="31" class="p3">神奈川県</option>
+<option value="32" class="p3">長野県</option>
+<option value="33" class="p3">山梨県</option>
+
+    
+<option value="34" class="p4">静岡県</option>
+<option value="35" class="p4">愛知県</option>
+<option value="36" class="p4">岐阜県</option>
+<option value="37" class="p4">三重県</option>
+    
+<option value="38" class="p5">新潟県</option>
+<option value="39" class="p5">富山県</option>
+<option value="40" class="p5">石川県</option>
+<option value="41" class="p5">福井県</option>
+    
+<option value="42" class="p6">滋賀県</option>
+<option value="43" class="p6">京都府</option>
+<option value="44" class="p6">大阪府</option>
+<option value="45" class="p6">兵庫県</option>
+<option value="46" class="p6">奈良県</option>
+<option value="47" class="p6">和歌山県</option>
+
+<option value="48" class="p7">岡山県</option>
+<option value="49" class="p7">広島県</option>
+<option value="50" class="p7">島根県</option>
+<option value="51" class="p7">鳥取県</option>
+
+<option value="52" class="p8">徳島県</option>
+<option value="53" class="p8">香川県</option>
+<option value="54" class="p8">愛媛県</option>
+<option value="55" class="p8">高知県</option>
+    
+<option value="56" class="p9">山口県</option>
+<option value="57" class="p9">福岡県</option>
+<option value="58" class="p9">大分県</option>
+<option value="59" class="p9">長崎県</option>
+<option value="60" class="p9">佐賀県</option>
+<option value="61" class="p9">熊本県</option>
+
+<option value="62" class="p10">宮崎県</option>
+<option value="63" class="p10">鹿児島県</option>
+
+<option value="64" class="p11">沖縄本島地方</option>
+<option value="65" class="p11">大東島地方</option>
+<option value="66" class="p11">宮古島地方</option>
+<option value="67" class="p11">八重山地方</option>
+
+</select>
+<!--/valueが取れればいい        -->
+<select name="lv3" id="lv3Pulldown" disabled="disabled">
+<option value="0">▼選択</option>
+<option value="Wakkanai" class="p12">宗谷</option>
+    
+<option value="Asahikawa" class="p13">上川</option>
+<option value="Rumoi" class="p13">留萌</option>
+    
+<option value="Sapporo" class="p14">石狩</option>
+<option value="Iwamizawa" class="p14">空知</option>
+<option value="Otaru" class="p14">後志</option>
+
+<option value="Abashiri" class="p15">綱走</option>
+<option value="Kitami" class="p15">北見</option>
+<option value="Monbetsu" class="p15">紋別</option>
+    
+<option value="Akkeshi" class="p16">釧路</option>
+<option value="Nemuro" class="p16">根室</option>
+<option value="Obihiro" class="p16">十勝</option>
+
+<option value="Tomakomai" class="p17">胆振</option>
+<option value="Urakawa" class="p17">日高</option>
+
+<option value="Hakodate" class="p18">渡島</option>    
+<option value="Setana" class="p18">檜山</option>
+    
+<option value="Mutsu" class="p19">下北</option>
+<option value="Hachinohe" class="p19">三八上北</option>
+<option value="Aomori" class="p19">津軽</option>
+
+<option value="Akita" class="p20">沿岸</option>
+<option value="Yokote" class="p20">内陸</option>
+
+<option value="Morioka" class="p21">内陸</option>
+<option value="Miyako" class="p21">沿岸北部</option>
+<option value="Ofunato" class="p21">沿岸南部</option>
+
+<option value="Ishinomaki" class="p22">東部</option>
+<option value="Aone-onsen" class="p22">西部</option>
+    
+<option value="Shinjo" class="p23">最上</option>
+<option value="Sakata" class="p23">庄内</option>
+<option value="Yamagata" class="p23">村山</option>
+<option value="Yonezawa" class="p23">置賜</option>
+
+<option value="Iwaki" class="p24">浜通り</option>
+<option value="Fukushima" class="p24">中通り</option>
+<option value="Kitakata" class="p24">会津</option>
+    
+<option value="Mito" class="p25">北部</option> //茨城
+<option value="Tsukuba" class="p25">南部</option> 
+
+<option value="Nikko" class="p26">北部</option> //栃木
+<option value="Utsunomiya" class="p26">南部</option>
+
+<option value="Numata" class="p27">北部</option> //群馬
+<option value="Maebashi" class="p27">南部</option>
+
+<option value="Kumagaya" class="p28">北部</option> //埼玉
+<option value="Kawagoe" class="p28">南部</option>
+<option value="Chichibu" class="p28">秩父地方</option>
+
+<option value="Tokyo" class="p29">東京地方</option> //東京
+<option value="Okago" class="p29">小笠原諸島</option>//小笠原諸島のデータを伊豆諸島南部のデータで代用してる
+<option value="Okata" class="p29">伊豆諸島北部</option>
+<option value="Okago" class="p29">伊豆諸島南部</option>
+
+<option value="Ichihara" class="p30">北西部</option> //千葉
+<option value="Hasaki" class="p30">北東部</option>
+<option value="Tateyama" class="p30">南部</option>
+    
+<option value="Yokosuka" class="p31">東部</option> //神奈川
+<option value="Sagamihara" class="p31">南部</option>
+
+<option value="Nagano" class="p32">北部</option> //長野
+<option value="Matsumoto" class="p32">中部</option>
+<option value="Iida" class="p32">南部</option>
+
+<option value="Kofu" class="p33">東部・富士五湖</option> //山梨
+<option value="Fujikawa" class="p33">中・西部</option>
+    
+<option value="Mishima" class="p34">東部</option> //静岡
+<option value="Shimoda" class="p34">伊豆</option>
+<option value="Shizuoka" class="p34">中部</option>
+<option value="Hamamatsu" class="p34">西部</option>
+
+<option value="Toyohashi" class="p35">東部</option> //愛知
+<option value="Nagoya" class="p35">西部</option>
+
+<option value="Takayama" class="p36">飛騨地方</option> //岐阜
+<option value="Gifu-shi" class="p36">美濃地方</option>
+    
+<option value="Yokkaichi" class="p37">北中部</option> //三重
+<option value="Owase" class="p37">南部</option>
+
+<option value="Ryotsu-minato" class="p38">佐渡</option> //新潟
+<option value="Niigata" class="p38">下越</option>
+<option value="Nagaoka" class="p38">中越</option>
+<option value="Itoigawa" class="p38">上越</option>
+
+<option value="Toyama" class="p39">東部</option>　//富山
+<option value="Takaoka" class="p39">西部</option>
+    
+<option value="Wajima" class="p40">能登</option> //石川
+<option value="Kanazawa" class="p40">加賀</option>
+    
+<option value="Fukui" class="p41">嶺北</option> //福井
+<option value="Tsuruga" class="p41">嶺南</option>
+
+<option value="Hikone" class="p42">北部</option> //滋賀
+<option value="Moriyama" class="p42">南部</option>
+
+<option value="Maizuru" class="p43">北部</option> //京都
+<option value="Kyoto" class="p43">南部</option>
+
+<option value="Kaizuka" class="p44">大阪</option> //大阪
+
+<option value="Toyooka" class="p45">北部</option> //兵庫
+<option value="Himeji" class="p45">南部</option>
+
+<option value="Nara" class="p46">北部</option> //奈良
+<option value="Kawai" class="p46">南部</option>
+
+<option value="Kainan" class="p47">北部</option> //和歌山
+<option value="Kushimo" class="p47">南部</option>
+
+<option value="Tsuyama" class="p48">北部</option> //岡山
+<option value="Okayama" class="p48">南部</option>
+
+<option value="Shobara" class="p49">北部</option> //広島
+<option value="Fukuyama" class="p49">南部</option>
+
+<option value="Imazu" class="p50">隠岐</option> //島根
+<option value="Matsue" class="p50">東部</option>
+<option value="Hamada" class="p50">西部</option>
+
+<option value="Tottori-shi" class="p51">東部</option> //鳥取
+<option value="Yonago" class="p51">中・西部</option>
+
+<option value="Tokushima" class="p52">北部</option> //徳島
+<option value="Anan" class="p52">南部</option>
+
+<option value="Tadotsu" class="p53">香川</option> //香川
+
+<option value="Niihama" class="p54">東予</option> //愛媛
+<option value="Matsuyama" class="p54">中予</option>
+<option value="Uwajima" class="p54">南予</option>
+
+<option value="Muroto-misakicho" class="p55">東部</option> //高知
+<option value="Kochi Prefecture" class="p55">中部</option>
+<option value="Sukumo" class="p55">西部</option>
+
+<option value="Yanai" class="p56">東部</option> //山口
+<option value="Yamaguchi" class="p56">中部</option>
+<option value="Hagi" class="p56">北部</option>
+<option value="Shimonoseki" class="p56">西部</option>
+
+<option value="Kitakyushu" class="p57">北九州</option> //福岡
+<option value="Iizuka" class="p57">筑豊</option>
+<option value="Kurume" class="p57">筑後</option>
+<option value="Fukuoka" class="p57">福岡</option>
+
+<option value="BungoTakada" class="p58">北部</option> //大分
+<option value="Oita" class="p58">中部</option>
+<option value="Hita" class="p58">西部</option>
+<option value="Saiki" class="p58">南部</option>
+
+<option value="Sasebo" class="p59">北部</option> //長崎
+<option value="Nagasaki" class="p59">南部</option>
+<option value="Fukuecho" class="p59">五島</option>
+<option value="Izuhara" class="p59">壱岐・対馬</option>
+
+<option value="Karatsu" class="p60">北部</option> //佐賀
+<option value="Saga" class="p60">南部</option>
+
+<option value="Kumamoto" class="p61">熊本</option> //熊本
+<option value="Takamori" class="p61">阿蘇</option>
+<option value="Hitoyoshi" class="p61">球磨</option>
+<option value="Ushibukamachi" class="p61">天草・芦北</option>
+
+<option value="Nobeoka" class="p62">北部平野部</option> //宮崎
+<option value="Hinokage" class="p62">北部山沿い</option>
+<option value="Miyazaki" class="p62">南部平野部</option>
+<option value="Miyakonojo" class="p62">南部山沿い</option>
+
+<option value="Makurazaki" class="p63">薩摩</option> //鹿児島
+<option value="Kanoya" class="p63">大隅</option>
+<option value="Nishinoomote" class="p63">種子島・屋久島</option>
+<option value="Naze" class="p63">奄美</option>
+
+<option value="Nago" class="p64">本島北部</option> //沖縄本島
+<option value="Naha" class="p64">本島中南部</option>
+<option value="Naha" class="p64">久米島</option> //久米島のデータがないので那覇で代用
+
+<option value="Shinto" class="p65">大東島</option> //大東島地方
+
+<option value="Shimochi" class="p66">宮古島</option> //宮古島
+
+<option value="Ishigaki" class="p67">石垣島</option> //八重山
+<option value="Yonakuni" class="p67">与那国島</option>
+    
+</select>
+        
+<button onclick="location.href='main/main.html'"class="start_button" type="submit">始める！</button> 
+    
+    
+</body>
+
+</html>

@@ -1,0 +1,73 @@
+/*----------メイン画面背景設定----------*/
+body {background-image: url("./image_back.jpg");}
+
+/*----------タイトル文字---------------*/
+.plan h1{
+  position: absolute;
+  text-align: center;
+  top: 520px;
+  color: #364e96;/*文字色*/
+  border: solid 3px #364e96;/*線色*/
+  padding: 0.5em;/*文字周りの余白*/
+  border-radius: 0.5em;/*角丸*/
+}
+
+/*------------アンケートの下地--------------*/
+.survey{
+  position: absolute;                /*絶対位置への配置*/
+  margin: 10px 450px;
+  width: 400px;
+  height: 350px;
+  bottom: 210px;
+  padding: 50px;
+  background: #ccffff;
+  border-radius: 60px;
+  display: inline-block              /*横幅を自動で変更*/
+} 
+.survey p {
+  margin: 20; 
+  padding: 20;
+  
+}
+
+/*----------次へボタン-----------*/
+button.next_button {
+  position: absolute;                /*絶対位置への配置*/
+  right: 125px;                      /*ボタン位置を左から-432pxずらす*/
+  top: 500px;                        /*ボタン位置を上から461pxずらす*/
+  width: 250px;                      /*横サイズを250pxに指定*/
+  height: 100px;                     /*縦サイズを100pxに指定*/
+  font-size: 1.4em;                  /*文字サイズを1.4emに指定*/
+  font-weight: bold;                 /*文字の太さをboldに指定*/
+  padding: 10px 30px;                /*縦方向に10px、横方向に30pxの余白を指定*/
+  background-color: #248;          /*景色を濃い青色に指定*/
+  color: #fff;                     /*文字色を白色に指定*/
+  border-style: none;                /*ボーダーをなくす*/
+  border-radius: 0.5em;
+}
+button.next_button:hover {
+  background-color: #24d;          /*背景色を明るい青色に指定*/
+  color: #fff;                     /*文字色を白色に指定*/
+}
+
+
+
+
+/* @media screen and (min-width:0px){
+  body{
+    color: #5bc0de;
+      
+  }
+}
+
+@media screen and (min-width:300px){
+  body{
+    color: #d9534f;
+  }
+}
+
+@media screen and (min-width:600px){
+  body{
+    color: #115a71;
+  }
+} */

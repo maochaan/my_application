@@ -1,0 +1,232 @@
+/*----------メイン画面背景設定----------*/
+/* body {background-image: url("./back.jpg");} */
+
+/*----------再提案ボタン-----------*/
+button.s_button {
+    position: absolute;                /*絶対位置への配置*/
+    left: 1000px;                      /*ボタン位置を左から1000pxずらす*/
+    top: 620px;                        /*ボタン位置を上から620pxずらす*/
+    width: 250px;                      /*横サイズを250pxに指定*/
+    height: 100px;                     /*縦サイズを100pxに指定*/
+    font-size: 1.4em;                  /*文字サイズを1.4emに指定*/
+    font-weight: bold;                 /*文字の太さをboldに指定*/
+    padding: 10px 30px;                /*縦方向に10px、横方向に30pxの余白を指定 */
+    background-color: #248;          /*景色を濃い青色に指定 */
+    color: #fff;                     /*文字色を白色に指定*/
+    border-style: none;                /*ボーダーをなくす*/
+    border-radius: 0.5em;              /*角を丸くする*/
+}
+button.s_button:hover {
+    background-color: #24d;          /*背景色を明るい青色に指定*/
+    color: #fff;                     /*文字色を白色に指定*/
+}
+
+/*----------トップスボタン-----------*/
+button.t_button {
+    position: absolute;                /*相対位置への配置*/
+    left: 170px;                       /*ボタン位置を左から100pxずらす*/
+    top: 280px;                        /*ボタン位置を上から280pxずらす*/
+    width: 180px;                      /*横サイズを250pxに指定*/
+    height: 100px;                     /*縦サイズを100pxに指定*/
+    font-size: 1.4em;                  /*文字サイズを1.4emに指定*/
+    font-weight: bold;                 /*文字の太さをboldに指定*/
+    padding: 10px 30px;                /*縦方向に10px、横方向に30pxの余白を指定*/
+    background-color: #248;          /*景色を濃い青色に指定*/
+    color: #fff;                     /*文字色を白色に指定*/
+    border-style: none;                /*ボーダーをなくす*/
+}
+button.t_button:hover {
+    background-color: #24d;          /*背景色を明るい青色に指定*/
+    color: #fff;                     /*文字色を白色に指定*/
+}
+
+/*----------インナーボタン-----------*/
+button.i_button {
+    position: absolute;                /*絶対位置への配置*/
+    left: 170px;                       /*ボタン位置を左から100pxずらす*/
+    top: 450px;                        /*ボタン位置を上から450pxずらす*/
+    width: 180px;                      /*横サイズを250pxに指定*/
+    height: 100px;                     /*縦サイズを100pxに指定*/
+    font-size: 1.4em;                  /*文字サイズを1.4emに指定*/
+    font-weight: bold;                 /*文字の太さをboldに指定*/
+    padding: 10px 30px;                /*縦方向に10px、横方向に30pxの余白を指定*/
+    background-color: #248;          /*景色を濃い青色に指定*/
+    color: #fff;                     /*文字色を白色に指定*/
+    border-style: none;                /*ボーダーをなくす*/
+}
+button.i_button:hover {
+    background-color: #24d;          /*背景色を明るい青色に指定*/
+    color: #fff;                     /*文字色を白色に指定*/
+}
+
+/*----------ボトムスボタン-----------*/
+button.b_button {
+    position: absolute;                /*絶対位置への配置*/
+    left: 170px;                       /*ボタン位置を左から100pxずらす*/
+    top: 620px;                        /*ボタン位置を上から620pxずらす*/
+    width: 180px;                      /*横サイズを250pxに指定*/
+    height: 100px;                     /*縦サイズを100pxに指定*/
+    font-size: 1.4em;                  /*文字サイズを1.4emに指定*/
+    font-weight: bold;                 /*文字の太さをboldに指定*/
+    padding: 10px 30px;                /*縦方向に10px、横方向に30pxの余白を指定*/
+    background-color: #248;          /*景色を濃い青色に指定*/
+    color: #fff;                     /*文字色を白色に指定*/
+    border-style: none;                /*ボーダーをなくす*/
+}
+button.b_button:hover {
+    background-color: #24d;          /*背景色を明るい青色に指定*/
+    color: #fff;                     /*文字色を白色に指定*/
+}
+
+/*-------------一言コメント-------------*/
+.advice{
+    position: absolute;                /*絶対位置への配置*/
+    margin: 2em 50px 2em 950px;
+    width: 150px;
+    height: 90px;
+    bottom: 200px;
+    padding: 100px;
+    background: #fff0c6;
+    border-radius: 60px;
+    display: inline-block              /*横幅を自動で変更*/
+}      
+.advice:before {  
+    content: "";
+    position: absolute;                /*絶対位置への配置*/
+    left: -38px;
+    width: 13px;
+    height: 12px;
+    bottom: 0;
+    background: #fff0c6;
+    border-radius: 50%;
+}
+.advice:after {
+    content: "";
+    position: absolute;                /*絶対位置への配置*/
+    left: -24px;
+    width: 20px;
+    height: 18px;
+    bottom: 3px;
+    background: #fff0c6;
+    border-radius: 50%;
+}
+.advice p {
+    margin: 0; 
+    padding: 0;
+}
+
+/*------------ハンバーガーメニュー----------*/
+* {
+    margin: 0;
+    padding: 0;
+  }
+  header {
+    /*ヘッダーを固定*/
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 75px;
+    background: #faf0e6;
+  }
+  #nav{
+    position: absolute;
+    height: 100vh;
+    width: 16%;
+    left: -16%;
+    top: 0;
+    background: #696969;
+    transition: .7s;
+  }
+  #nav ul{
+    padding-top: 80px;
+  }
+  #nav ul li{
+    list-style-type: none;
+    font-size: 20px;
+  }
+  #nav a{
+    display: block;
+    text-decoration: none;
+    color: #ffffff;
+    margin: 0 15px;
+    padding: 10px;
+    transition: .5s;
+  }
+  #nav li a:hover{
+    color: #ffffff;
+    background: #cd5c5c;
+    border-bottom: none;
+  }
+  #hamburger {
+    display: block;
+    position: absolute;
+    top: 10px;
+    left: 30px;
+    width: 50px;
+    height: 44px;
+    cursor: pointer;
+    transition: 1s;
+  }
+  .inner_line {
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background-color: #000000;
+    transition: 1s;
+    border-radius: 4px;
+  }
+  #line1 {
+    top: 0;
+  }
+  #line2 {
+    top: 20px;
+  }
+  #line3 {
+    bottom: 0px;
+  }
+  h1, h2 {
+    text-align: center;
+    line-height: 90px;
+    color: #ffffff;
+  }
+  h2 {
+    display: none;
+  }
+  p {
+    padding-top: 200px;
+    text-align: center;
+  }
+  .in{
+    transform: translateX(100%);
+  }
+  .line_1,.line_2,.line_3{
+    background: #000000;
+  }
+  .line_1 {
+    transform: translateY(20px) rotate(-45deg);
+    top: 0;
+  }
+  .line_2 {
+    opacity: 0;
+  }
+  .line_3 {
+    transform: translateY(-20px) rotate(45deg);
+    bottom: 0;
+  }
+  
+  @media screen and (max-width: 480px) {
+    #nav ul li {
+      font-size: 14px;
+    }
+    h1 {
+      display: none;
+    }
+    h2 {
+      display: block;
+      font-size: 14px;
+    }
+  }
+
+  

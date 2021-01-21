@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css"href="cloth_man.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="plan" align='center'>てんこーで 〜天気予報&服装提案アプリ〜</h1>
+    <div class='cloth_survey'>
+        <form name="man__">
+            <nav id="page" align='center'>
+            <header id ="header" align='center'>【所持している服を選択してください】</header><br>
+                <b>インナー</b>
+                <div id="inner"></div>
+                <br>
+                <b>トップス</b>
+                <div id="tops"></div>
+                <br>
+                <b>アウター</b>
+                <div id="outer"></div>
+                <br>
+                <b>パンツ</b>
+                <div id="pants"></div>
+                <br>
+            </nav>
+        </form>
+        <input type="button" name="all" value="全部にチェック" id="all" class="all_check">
+        <input type="button" name="non_all" value="チェックを外す" id="non_all" class="nonall_check">
+
+        <button onclick="man_next()" class="man_next_button" type="submit">次へ!</button>
+        <!-- <p><span id="span2"></span></p> -->
+    </div>
+
+    <script src="jquery-3.5.1.min.js"></script>
+    <script src="man_cloth.js"></script>
+    <script src="start.js"></script>
+    <script src="next_search.js"></script>
+</body>
+</html>

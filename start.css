@@ -1,0 +1,108 @@
+/*----------メイン画面背景設定----------*/
+body {background-image: url("./image_back.jpg");}
+
+
+/* ------------アプリの説明--------------
+.explan{
+    position: absolute;                /*絶対位置への配置
+    margin: 50px 450px;
+    width: 400px;
+    height: 280px;
+    bottom: 250px;
+    padding: 50px;
+    background: #ccffff;
+    border-radius: 60px;
+    display: inline-block              /*横幅を自動で変更
+} 
+.explan p {
+    margin: 20; 
+    padding: 20;
+    
+} */
+
+/*--タイトル文字*/
+/* .plan h1{
+    position: relative;
+    text-align: center;
+    top: 90%;
+    color: #ffffff;
+    border: solid 3px #364e96;
+    padding: 0.5em;
+    border-radius: 0.5em;
+} */
+
+/*----------始めるボタン-----------*/
+button.start_button {
+    position: absolute;                /*絶対位置への配置*/
+    right: 750px;                      /*ボタン位置を左から100pxずらす*/
+    top: 620px;                        /*ボタン位置を上から620pxずらす*/
+    width: 250px;                      /*横サイズを250pxに指定*/
+    height: 100px;                     /*縦サイズを100pxに指定*/
+    font-size: 1.4em;                  /*文字サイズを1.4emに指定*/
+    font-weight: bold;                 /*文字の太さをboldに指定*/
+    padding: 10px 30px;                /*縦方向に10px、横方向に30pxの余白を指定*/
+    background-color: #248;          /*景色を濃い青色に指定*/
+    color: #fff;                     /*文字色を白色に指定*/
+    border-style: none;                /*ボーダーをなくす*/
+    border-radius: 0.5em;
+}
+button.start_button:hover {
+    background-color: #24d;          /*背景色を明るい青色に指定*/
+    color: #fff;                     /*文字色を白色に指定*/
+}
+
+/*----------地点入力へ飛ぶボタン-----------*/
+button.point_button {
+    position: absolute;                /*絶対位置への配置*/
+    right: 450px;                      /*ボタン位置を左から100pxずらす*/
+    top: 620px;                        /*ボタン位置を上から620pxずらす*/
+    width: 250px;                      /*横サイズを250pxに指定*/
+    height: 100px;                     /*縦サイズを100pxに指定*/
+    font-size: 1.4em;                  /*文字サイズを1.4emに指定*/
+    font-weight: bold;                 /*文字の太さをboldに指定*/
+    padding: 10px 30px;                /*縦方向に10px、横方向に30pxの余白を指定*/
+    background-color: #248;          /*景色を濃い青色に指定*/
+    color: #fff;                     /*文字色を白色に指定*/
+    border-style: none;                /*ボーダーをなくす*/
+    border-radius: 0.5em;
+}
+button.point_button:hover {
+    background-color: #24d;          /*背景色を明るい青色に指定*/
+    color: #fff;                     /*文字色を白色に指定*/
+}
+
+/*-----------説明スライド-----------*/
+.swiper-wrapper {
+    position:absolute;
+	width:100%;
+    height: 300px;
+}
+/* 全スライド共通スタイル */
+.swiper-slide {
+    position:absolute;
+	color: #ffffff;
+	width: 100%;
+    height: 300px;
+	text-align: center;
+    line-height: 300px;
+}
+/* 5の倍数＋1枚目のスライドのスタイル（1枚目、6枚目…） */
+.swiper-slide:nth-child(5n+1) {
+	background-color: #EECB27;
+}
+/* 5の倍数＋2枚目のスライドのスタイル（2枚目、7枚目…） */
+.swiper-slide:nth-child(5n+2) {
+	background-color: #E13239;
+}
+/* 5の倍数＋3枚目のスライドのスタイル（3枚目、8枚目…） */
+.swiper-slide:nth-child(5n+3) {
+	background-color: #1F1762;
+}
+/* 5の倍数＋4枚目のスライドのスタイル（4枚目、9枚目…） */
+.swiper-slide:nth-child(5n+4) {
+	background-color: #BEDAE5;
+}
+/* 5の倍数＋5枚目のスライドのスタイル（5枚目、10枚目…） */
+.swiper-slide:nth-child(5n+5) {
+	background-color: #ff69b4;
+}

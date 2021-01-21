@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+    
+    <head>
+        <meta charset="UTF-8">
+        <title>アンケート画面</title>
+        <link rel="stylesheet" type="text/css"href="anke-to1.css">
+        <script src="jquery-3.5.1.min.js"></script>
+        <script src="./start.js"></script>
+    </head>
+
+    <body>
+        <h1 class="plan" align='center'>てんこーで 〜天気予報&服装提案アプリ〜</h1>
+        <div class='survey'>
+            <h1 align='center'><span class="under">〜アンケート〜</span></h1>
+            <h3 align='center'>性別</h3>
+            <form name="sex" align='center'>
+                <label><input type="radio" name="sex" value="male" id="male">男性</label>
+                <label><input type="radio" name="sex" value="female" id="female">女性</label>
+            </form>
+            <form name="age_" align='center'>
+                <h3 align='center'>年齢</h3>
+                <select name="age">
+                    <option value="null">----</option>
+                    <option value="ten">10代</option>
+                    <option value="twenty">20代</option>
+                    <option value="thirty">30代</option>
+                    <option value="fourty">40代</option>
+                    <option value="fifty">50代</option>
+                </select>
+            </form>
+            <h3 align='center'>体質</h3>
+            <form name="taisitu" align='center'>
+                <label><input type="radio" name="kimoti" value="atui">暑がり</label>
+                <label><input type="radio" name="kimoti" value="samui">寒がり</label>
+                <label><input type="radio" name="kimoti" value="hutuu">普通</label>
+            </form><br>
+            <button onclick="clickBtn1()" class="next_button" type="submit">次へ!</button>
+            <p><span id="sex1"></span></p>
+            <p><span id="taisitu1"></span></p>  
+        </div>
+        <script>
+            
+        </script>
+        
+    </body>
+</html>
